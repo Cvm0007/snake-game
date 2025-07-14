@@ -1,13 +1,7 @@
-import React from "react";
+// Food.jsx
 
-export default function Food({ food }) {
-  return (
-    <div
-      style={{
-        gridColumn: food[0] + 1,
-        gridRow: food[1] + 1,
-      }}
-      className="bg-red-500 rounded-full animate-bounce"
-    />
-  );
-}
+const Food = () => (
+  <div className="w-3/4 h-3/4 bg-red-500 rounded-full shadow-[0_0_10px_4px_red] animate-bounce" />
+);
+
+export default Food;

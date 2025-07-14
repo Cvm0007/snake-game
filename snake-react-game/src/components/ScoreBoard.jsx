@@ -1,14 +1,11 @@
-import { Typography } from "@mui/material";
-
-export default function ScoreBoard({ score, best }) {
+// src/components/ScoreBoard.jsx
+const ScoreBoard = ({ score, best }) => {
   return (
-    <div className="text-center">
-      <Typography variant="h6" sx={{ color: "#ffffff" }}>
-        Score: {score}
-      </Typography>
-      <Typography variant="subtitle2" sx={{ color: "#bbbbbb" }}>
-        Best: {best}
-      </Typography>
+    <div className="bg-black/60 p-4 rounded-xl shadow-md flex justify-between gap-10 w-full max-w-xs text-lg font-semibold text-white">
+      <span>Score: {score}</span>
+      <span>Best: {best}</span>
     </div>
   );
-}
+};
+
+export default ScoreBoard;

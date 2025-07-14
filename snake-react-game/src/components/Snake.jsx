@@ -1,20 +1,15 @@
-import React from "react";
+// Snake.jsx
 
-export default function Snake({ snake }) {
+const Snake = ({ isHead = false }) => {
   return (
-    <>
-      {snake.map(([x, y], index) => (
-        <div
-          key={index}
-          style={{
-            gridColumn: x + 1,
-            gridRow: y + 1,
-          }}
-          className={`${
-            index === 0 ? "bg-green-600" : "bg-green-400"
-          } rounded-md transition-all duration-75`}
-        />
-      ))}
-    </>
+    <div
+      className={`w-3/4 h-3/4 rounded-md ${
+        isHead
+          ? "bg-green-800 shadow-[0_0_8px_4px_#0f0]" // Snake head
+          : "bg-green-400 shadow-[0_0_6px_2px_#0f0] animate-pulse" // Snake body
+      }`}
+    />
   );
-}
+};
+
+export default Snake;
